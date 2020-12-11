@@ -1,7 +1,7 @@
 "" options
-set number
+set number  " 行番号を表示する
 set encoding=UTF-8
-set backspace=indent,eol,start
+set backspace=indent,eol,start  " バックスペースを有効にする
 set termwinsize=12x0  " ターミナルのサイズを指定
 set updatetime=250  " 反映時間を短くする(デフォルトは4000ms)
 
@@ -82,7 +82,7 @@ let g:airline#extensions#tabline#show_close_button = 0
 
 
 "" ferm.vim
-" <C-n>でファイルツリーを表示/非表示する
+" ファイルツリーを表示/非表示する
 nnoremap <C-n> :Fern . -reveal=% -drawer -toggle -width=40<CR>
 " アイコンを表示する
 let g:fern#renderer = 'nerdfont'
@@ -95,40 +95,40 @@ augroup END
 
 
 "" git操作
-" g]で前の変更箇所へ移動する
+" 前の変更箇所へ移動する
 nnoremap g] :GitGutterPrevHunk<CR>
-" g[で次の変更箇所へ移動する
+" 次の変更箇所へ移動する
 nnoremap g[ :GitGutterNextHunk<CR>
-" ghでdiffをハイライトする
+" diffをハイライトする
 nnoremap gh :GitGutterLineHighlightsToggle<CR>
-" gpでカーソル行のdiffを表示する
+" カーソル行のdiffを表示する
 nnoremap gp :GitGutterPreviewHunk<CR>
 " 記号の色を変更する
 highlight GitGutterAdd ctermfg=green
 highlight GitGutterChange ctermfg=blue
 highlight GitGutterDelete ctermfg=red
-" gdでdiffを表示する
+" diffを表示する
 nnoremap gd :Gdiff<CR>
-" gbで該当のファイルをGitHubで開く
+" 該当のファイルをGitHubで開く
 nnoremap gb :Gbrowse<CR>
 vnoremap gb :Gbrowse<CR>
 
 
 "" fzf
-" fbでバッファ検索を開く
+" バッファ検索を開く
 nnoremap fb :Buffers<CR>
-" flで開いているファイルの文字列検索を開く
+" 開いているファイルの文字列検索を開く
 nnoremap fl :BLines<CR>
-" fmでマーク検索を開く
+" マーク検索を開く
 nnoremap fm :Marks<CR>
-" fhでファイル閲覧履歴検索を開く
+" ファイル閲覧履歴検索を開く
 nnoremap fh :History<CR>
-" fpで1つ前に開いたファイルを開く
+" 1つ前に開いたファイルを開く
 nnoremap fp :History<CR><CR>
-" fcでコミット履歴検索を開く
+" コミット履歴検索を開く
 nnoremap fc :Commits<CR>
 
-" <C-p>でファイル検索を開く
+" ファイル検索を開く
 " git管理されていれば:GFiles、そうでなければ:Filesを実行する
 fun! FzfOmniFiles()
   let is_git = system('git status')
@@ -140,7 +140,7 @@ fun! FzfOmniFiles()
 endfun
 nnoremap <C-p> :call FzfOmniFiles()<CR>
 
-" <C-g>で文字列検索を開く
+" 文字列検索を開く
 " <S-?>でプレビューを表示/非表示する
 command! -bang -nargs=* Rg
 \ call fzf#vim#grep(
@@ -150,8 +150,8 @@ command! -bang -nargs=* Rg
 \ <bang>0)
 nnoremap <C-g> :Rg<CR>
 
-" frでカーソル位置の単語をファイル検索する
+" カーソル位置の単語をファイル検索する
 nnoremap fr vawy:Rg <C-R>"<CR>
-" frで選択した単語をファイル検索する
+" 選択した単語をファイル検索する
 xnoremap fr y:Rg <C-R>"<CR>
 
