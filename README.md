@@ -1,8 +1,7 @@
 # vscode-like-vimrc
 VimをVSCodeライクにするための.vimrcです
 
-![vim-demo5.gif](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/145075/f23742aa-68ea-0fb8-79bd-f1d95c77ba4a.gif)
-
+![vim5.gif](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/145075/613aa205-b99f-32c2-4bc3-18b9622ab1af.gif)
 
 ## setup
 
