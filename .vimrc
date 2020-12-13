@@ -113,19 +113,6 @@ vnoremap gb :Gbrowse<CR>
 
 
 "" fzf
-" バッファ検索を開く
-nnoremap fb :Buffers<CR>
-" 開いているファイルの文字列検索を開く
-nnoremap fl :BLines<CR>
-" マーク検索を開く
-nnoremap fm :Marks<CR>
-" ファイル閲覧履歴検索を開く
-nnoremap fh :History<CR>
-" 1つ前に開いたファイルを開く
-nnoremap fp :History<CR><CR>
-" コミット履歴検索を開く
-nnoremap fc :Commits<CR>
-
 " ファイル検索を開く
 " git管理されていれば:GFiles、そうでなければ:Filesを実行する
 fun! FzfOmniFiles()
@@ -152,4 +139,17 @@ nnoremap <C-g> :Rg<CR>
 nnoremap fr vawy:Rg <C-R>"<CR>
 " 選択した単語をファイル検索する
 xnoremap fr y:Rg <C-R>"<CR>
+
+" バッファ検索を開く
+nnoremap fb :Buffers<CR>
+" fpでバッファの中で1つ前に開いたファイルを開く
+nnoremap fp :Buffers<CR><CR>
+" 開いているファイルの文字列検索を開く
+nnoremap fl :BLines<CR>
+" マーク検索を開く
+nnoremap fm :Marks<CR>
+" ファイル閲覧履歴検索を開く
+nnoremap fh :History<CR>
+" コミット履歴検索を開く
+nnoremap fc :Commits<CR>
 
