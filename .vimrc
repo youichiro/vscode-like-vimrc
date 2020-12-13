@@ -96,9 +96,9 @@ augroup END
 
 "" git操作
 " 前の変更箇所へ移動する
-nnoremap g] :GitGutterPrevHunk<CR>
+nnoremap g[ :GitGutterPrevHunk<CR>
 " 次の変更箇所へ移動する
-nnoremap g[ :GitGutterNextHunk<CR>
+nnoremap g] :GitGutterNextHunk<CR>
 " diffをハイライトする
 nnoremap gh :GitGutterLineHighlightsToggle<CR>
 " カーソル行のdiffを表示する
