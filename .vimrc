@@ -107,8 +107,6 @@ nnoremap gp :GitGutterPreviewHunk<CR>
 highlight GitGutterAdd ctermfg=green
 highlight GitGutterChange ctermfg=blue
 highlight GitGutterDelete ctermfg=red
-" diffを表示する
-nnoremap gd :Gdiff<CR>
 " 該当のファイルをGitHubで開く
 nnoremap gb :Gbrowse<CR>
 vnoremap gb :Gbrowse<CR>
